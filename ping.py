@@ -44,7 +44,7 @@ async def bound_fetch(semaphore, session, url):
 
 
 async def run():
-    work = [url for site, url in sites("sites-using-cloudflare-dns.md")]
+    work = [url for _, url in sites("sites-using-cloudflare-dns.md")]
     tasks = []
     sem = asyncio.Semaphore(1024)
 
